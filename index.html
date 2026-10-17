@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KPRIET — Student Admission and Information Portal</title>
+  <meta name="description" content="KPR Institute of Engineering and Technology — Official Student Admission and Information Management Portal. Apply for admission, manage student records, and access your profile.">
+  <link rel="icon" type="image/png" href="kprietLogo.png">
+  <link rel="stylesheet" href="assets/css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="KPRIET Home">
+        <img src="kprietLogo.png" alt="KPR Institute of Engineering and Technology Logo">
+      </a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="Q1_Student_Admission/index.html">Admission</a>
+        <a href="Q2_College_Admin/auth/login.php">Administration</a>
+        <a href="student_portal/login.php">Student Portal</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="Q1_Student_Admission/index.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <a href="Q2_College_Admin/auth/login.php" class="btn btn-secondary btn-sm">Admin Login</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-content container">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Admissions Open 2025&#8211;26
+        </div>
+        <h1>Your Gateway to<br><span class="hero-highlight">Engineering Excellence</span></h1>
+        <p class="hero-desc">KPR Institute of Engineering and Technology &#8212; Autonomous, Affiliated to Anna University. A premier destination for technical education, research, and innovation in Coimbatore.</p>
+        <div class="hero-actions">
+          <a href="Q1_Student_Admission/index.html" class="btn btn-primary btn-lg" id="applyNowBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Apply for Admission
+          </a>
+          <a href="#services" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Explore Services
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">60+</span><span class="stat-label">Years of Excellence</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">15+</span><span class="stat-label">UG &amp; PG Programmes</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat"><span class="stat-num">NBA</span><span class="stat-label">Accredited Programmes</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <img src="Registration.jpg" alt="Student registration and admission at KPRIET" class="hero-img">
+          <div class="hero-badge-float hero-badge-float--1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+            <span>Autonomous Institution</span>
+          </div>
+          <div class="hero-badge-float hero-badge-float--2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Anna University Affiliated</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f8f9fc"/></svg>
+    </div>
+  </section>
+
+  <!-- SERVICE CARDS -->
+  <section class="section" id="services" aria-label="Portal services">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Our Portals</span>
+        <h2>Student Services and Administration</h2>
+        <p>Three integrated modules providing a complete end-to-end experience for students, administrators, and faculty.</p>
+      </div>
+      <div class="services-grid">
+
+        <!-- Q1 Card -->
+        <article class="service-card" id="card-admission">
+          <div class="service-card__icon service-card__icon--blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="service-card__badge">Online Admission</div>
+          <h3>Student Admission Portal</h3>
+          <p>Prospective students can complete their online registration, provide personal and academic details, select a preferred course, and upload the required supporting documents. Real-time validation guides applicants through every step.</p>
+          <ul class="service-card__features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Multi-section registration form
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Client-side validation and password strength
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Document upload with type and size checks
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Fully responsive layout
+            </li>
+          </ul>
+          <a href="Q1_Student_Admission/index.html" class="btn btn-primary" id="applyAdmissionBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            Apply for Admission
+          </a>
+        </article>
+
+        <!-- Q2 Card -->
+        <article class="service-card service-card--featured" id="card-admin">
+          <div class="service-card__icon service-card__icon--green">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="service-card__badge service-card__badge--green">Administration Suite</div>
+          <h3>College Admin Panel</h3>
+          <p>Authorised administrators can manage the complete student database &#8212; add, view, edit, and delete student records. Administrators can also manage uploaded profile images and official documents with full metadata tracking.</p>
+          <ul class="service-card__features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Full CRUD operations on student records
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Secure file upload and metadata storage
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Search, filter, and paginate records
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Session-based secure authentication
+            </li>
+          </ul>
+          <a href="Q2_College_Admin/auth/login.php" class="btn btn-primary" id="adminLoginBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Admin Login
+          </a>
+        </article>
+
+        <!-- Q3 Card -->
+        <article class="service-card" id="card-portal">
+          <div class="service-card__icon service-card__icon--blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="service-card__badge">Student Portal</div>
+          <h3>Student Profile Portal</h3>
+          <p>Authenticated students can securely access their personal profile, view academic details, and retrieve their uploaded documents through authorised portal endpoints. Session-based access ensures privacy and security.</p>
+          <ul class="service-card__features">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Secure personal &amp; academic profile view
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Authorised certificate &amp; document access
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Real-time admission status tracking
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Responsive student dashboard
+            </li>
+          </ul>
+          <a href="student_portal/login.php" class="btn btn-outline-primary" id="studentLoginBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            Student Login
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="section about-section" id="about" aria-label="About KPRIET">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="tag">About KPRIET</span>
+          <h2>A Legacy of Technical<br>Education and Research</h2>
+          <p>KPR Institute of Engineering and Technology is an autonomous institution affiliated to Anna University, Chennai. Situated in Coimbatore, Tamil Nadu, the institution offers undergraduate and postgraduate programmes in engineering, technology, and applied sciences.</p>
+          <p style="margin-top:1rem">The institution is committed to providing quality technical education that empowers students to contribute to society through knowledge, innovation, and professional practice.</p>
+          <div class="about-highlights">
+            <div class="about-highlight">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <div>
+                <strong>Autonomous Institution</strong>
+                <span>Affiliated to Anna University</span>
+              </div>
+            </div>
+            <div class="about-highlight">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <div>
+                <strong>NBA Accredited</strong>
+                <span>Nationally recognised programmes</span>
+              </div>
+            </div>
+            <div class="about-highlight">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <div>
+                <strong>Industry Ready</strong>
+                <span>Strong industry connections and placements</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-logo-display">
+            <img src="kprietLogo.png" alt="KPR Institute of Engineering and Technology" class="about-logo">
+          </div>
+          <div class="about-info-cards">
+            <div class="info-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Location</strong>
+                <span>Arasur, Coimbatore &#8212; 641407, Tamil Nadu</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <div>
+                <strong>Academic Year</strong>
+                <span>2025&#8211;2026 Admissions Now Open</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt" aria-label="Application process">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Application Process</span>
+        <h2>How to Apply</h2>
+        <p>A simple, guided online application process designed to help prospective students submit their admission request efficiently.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h4>Register Online</h4>
+          <p>Fill out the online admission form with your personal, academic, and contact details through the Admission Portal.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h4>Upload Documents</h4>
+          <p>Upload scanned copies of your mark sheets, ID proof, and other required supporting documents as specified in the form.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h4>Admin Review</h4>
+          <p>The college administration reviews your application and manages your student record through the secure Admin Panel.</p>
+        </div>
+        <div class="step-connector" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h4>Access Profile</h4>
+          <p>Once enrolled, access your student profile, academic information, and permitted documents through the Student Portal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="kprietLogo.png" alt="KPRIET Logo">
+        </div>
+        <p>An autonomous institution affiliated to Anna University, Chennai. Committed to quality technical education, research, and holistic development of students.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Portals</h4>
+        <ul>
+          <li><a href="Q1_Student_Admission/index.html">Admission Portal</a></li>
+          <li><a href="Q2_College_Admin/auth/login.php">Admin Panel</a></li>
+          <li><a href="student_portal/login.php">Student Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#about">About KPRIET</a></li>
+          <li><a href="#services">Our Services</a></li>
+          <li><a href="database/schema.sql">Database Schema</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="Q1_Student_Admission/index.html">Apply for Admission</a></li>
+          <li><a href="Q2_College_Admin/auth/login.php">Administrator Login</a></li>
+          <li><a href="student_portal/login.php">Student Profile Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KPR Institute of Engineering and Technology, Coimbatore. All rights reserved.</span>
+      <span>Autonomous Institution &bull; Affiliated to Anna University</span>
+    </div>
+  </footer>
+
+  <script>
+    /* Mobile nav toggle */
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+
+    /* Close nav on link click (mobile) */
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+      });
+    });
+
+    /* Smooth scroll for anchor links */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+
+    /* Intersection observer for reveal animations */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.service-card, .step-card, .about-highlight, .info-card').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

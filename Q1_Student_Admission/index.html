@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Admission Portal — KPRIET</title>
+  <meta name="description" content="Apply for admission to KPR Institute of Engineering and Technology. Complete the online registration form with your personal, academic, and contact details.">
+  <link rel="icon" type="image/png" href="../kprietLogo.png">
+  <link rel="stylesheet" href="../assets/css/shared.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo" aria-label="KPRIET Home">
+        <img src="../kprietLogo.png" alt="KPR Institute of Engineering and Technology Logo">
+      </a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="index.html" class="active" aria-current="page">Admission</a>
+        <a href="../Q2_College_Admin/auth/login.php">Administration</a>
+        <a href="../student_portal/login.php">Student Portal</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="../Q2_College_Admin/auth/login.php" class="btn btn-secondary btn-sm">Admin Login</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Student Admission</span>
+      </div>
+      <h1>Student Admission Portal</h1>
+      <p>Complete the online admission form below. All fields marked with an asterisk are required.</p>
+    </div>
+  </div>
+
+  <!-- MAIN FORM -->
+  <main class="form-page" role="main">
+    <div class="container">
+      <div class="form-layout">
+
+        <!-- PROGRESS SIDEBAR -->
+        <aside class="form-sidebar" aria-label="Form progress">
+          <div class="progress-card">
+            <h3>Application Progress</h3>
+            <nav class="progress-steps" id="progressSteps" aria-label="Form sections">
+              <button class="progress-step active" data-section="personal" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </span>
+                <span class="step-label">Personal Details</span>
+              </button>
+              <button class="progress-step" data-section="contact" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span class="step-label">Contact Information</span>
+              </button>
+              <button class="progress-step" data-section="academic" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </span>
+                <span class="step-label">Academic Qualifications</span>
+              </button>
+              <button class="progress-step" data-section="course" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </span>
+                <span class="step-label">Course Preferences</span>
+              </button>
+              <button class="progress-step" data-section="account" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </span>
+                <span class="step-label">Account and Password</span>
+              </button>
+              <button class="progress-step" data-section="documents" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </span>
+                <span class="step-label">Document Upload</span>
+              </button>
+              <button class="progress-step" data-section="declaration" type="button">
+                <span class="step-indicator">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                <span class="step-label">Declaration</span>
+              </button>
+            </nav>
+          </div>
+          <div class="sidebar-note">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <p>Fields marked <span style="color:var(--color-error)">*</span> are required. Please verify all details and uploaded documents before submission.</p>
+          </div>
+        </aside>
+
+        <!-- FORM -->
+        <div class="form-main">
+          <form id="admissionForm" novalidate aria-label="Student admission form" method="post" action="../Q2_College_Admin/add_student.php" enctype="multipart/form-data">
+
+            <!-- SECTION 1: PERSONAL -->
+            <section class="form-section active" id="section-personal" aria-labelledby="heading-personal">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-personal">Personal Details</h2>
+                  <p>Provide your full legal name and personal information as it appears on your official documents.</p>
+                </div>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="firstName">First Name <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="firstName" name="first_name" class="form-control" placeholder="Enter your first name" autocomplete="given-name" required aria-required="true">
+                  <span class="error-msg" id="err-firstName" role="alert">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    First name is required.
+                  </span>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="lastName" name="last_name" class="form-control" placeholder="Enter your last name" autocomplete="family-name" required aria-required="true">
+                  <span class="error-msg" id="err-lastName" role="alert">Last name is required.</span>
+                </div>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="rollNumber">Roll Number <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="rollNumber" name="roll_number" class="form-control" placeholder="e.g. 21CS001" required aria-required="true" pattern="[A-Za-z0-9]{4,20}">
+                  <span class="error-msg" id="err-rollNumber" role="alert">Enter a valid roll number (4–20 alphanumeric characters).</span>
+                </div>
+                <div class="form-group">
+                  <label for="dob">Date of Birth <span class="required" aria-label="required">*</span></label>
+                  <input type="date" id="dob" name="date_of_birth" class="form-control" required aria-required="true">
+                  <span class="error-msg" id="err-dob" role="alert">Date of birth is required.</span>
+                </div>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="gender">Gender <span class="required" aria-label="required">*</span></label>
+                  <select id="gender" name="gender" class="form-control" required aria-required="true">
+                    <option value="">Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not">Prefer not to say</option>
+                  </select>
+                  <span class="error-msg" id="err-gender" role="alert">Please select your gender.</span>
+                </div>
+                <div class="form-group">
+                  <label for="nationalitySelect">Nationality <span class="required" aria-label="required">*</span></label>
+                  <select id="nationalitySelect" name="nationalitySelect" class="form-control" required aria-required="true">
+                    <option value="Indian" selected>Indian</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- DYNAMIC NEW FORM BOX FOR OTHER NATIONALITY -->
+              <div class="form-group" id="otherNationalityGroup" style="display:none; margin-top:0.5rem; background: #f0f7ff; padding: 1.15rem; border-radius: var(--radius-md); border: 1.5px dashed #3b82f6;">
+                <label for="otherNationality" style="font-weight:600; color:var(--color-primary)">Please Specify Your Nationality <span class="required" aria-label="required">*</span></label>
+                <input type="text" id="otherNationality" name="other_nationality" class="form-control" placeholder="Write the nationality / country you belong to">
+                <span class="error-msg" id="err-otherNationality" role="alert">Please enter the nationality you belong to.</span>
+              </div>
+              <input type="hidden" id="nationality" name="nationality" value="Indian">
+              <div class="form-nav">
+                <span></span>
+                <button type="button" class="btn btn-primary" id="nextPersonal">
+                  Next
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- SECTION 2: CONTACT -->
+            <section class="form-section" id="section-contact" aria-labelledby="heading-contact">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-contact">Contact Information</h2>
+                  <p>Provide your email address, phone number, and residential address.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span class="required" aria-label="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="yourname@example.com" autocomplete="email" required aria-required="true">
+                <span class="error-msg" id="err-email" role="alert">Enter a valid email address (e.g. name@domain.com).</span>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="phone">Phone Number <span class="required" aria-label="required">*</span></label>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="10-digit mobile number" autocomplete="tel" required aria-required="true" pattern="[6-9][0-9]{9}">
+                  <span class="error-msg" id="err-phone" role="alert">Enter a valid 10-digit Indian mobile number.</span>
+                </div>
+                <div class="form-group">
+                  <label for="altPhone">Alternate Phone</label>
+                  <input type="tel" id="altPhone" name="alt_phone" class="form-control" placeholder="Optional alternate number">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="address">Residential Address <span class="required" aria-label="required">*</span></label>
+                <textarea id="address" name="address" class="form-control" rows="3" placeholder="Street, City, State, PIN code" required aria-required="true"></textarea>
+                <span class="error-msg" id="err-address" role="alert">Residential address is required.</span>
+              </div>
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="city">City <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="city" name="city" class="form-control" placeholder="Your city" required aria-required="true">
+                  <span class="error-msg" id="err-city" role="alert">City is required.</span>
+                </div>
+                <div class="form-group">
+                  <label for="pincode">PIN Code <span class="required" aria-label="required">*</span></label>
+                  <input type="text" id="pincode" name="pincode" class="form-control" placeholder="6-digit PIN" required aria-required="true" pattern="[0-9]{6}">
+                  <span class="error-msg" id="err-pincode" role="alert">Enter a valid 6-digit PIN code.</span>
+                </div>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline-primary" id="prevContact">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                  Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="nextContact">
+                  Next
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- SECTION 3: ACADEMIC -->
+            <section class="form-section" id="section-academic" aria-labelledby="heading-academic">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-academic">Academic Qualifications</h2>
+                  <p>Provide details of your qualifying examination. All percentages should be accurate as per mark sheets.</p>
+                </div>
+              </div>
+              <fieldset class="form-fieldset">
+                <legend>10th Standard (SSLC)</legend>
+                <div class="form-grid-3">
+                  <div class="form-group">
+                    <label for="sslcSchool">School Name <span class="required" aria-label="required">*</span></label>
+                    <input type="text" id="sslcSchool" name="sslc_school" class="form-control" placeholder="School name" required aria-required="true">
+                    <span class="error-msg" id="err-sslcSchool" role="alert">School name is required.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="sslcYear">Year of Passing <span class="required" aria-label="required">*</span></label>
+                    <input type="number" id="sslcYear" name="sslc_year" class="form-control" placeholder="e.g. 2022" min="2000" max="2030" required aria-required="true">
+                    <span class="error-msg" id="err-sslcYear" role="alert">Enter a valid year (2000–2030).</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="sslcPercent">Percentage <span class="required" aria-label="required">*</span></label>
+                    <input type="number" id="sslcPercent" name="sslc_percentage" class="form-control" placeholder="e.g. 92.5" min="0" max="100" step="0.01" required aria-required="true">
+                    <span class="error-msg" id="err-sslcPercent" role="alert">Enter a valid percentage (0–100).</span>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form-fieldset">
+                <legend>12th Standard / HSC</legend>
+                <div class="form-grid-3">
+                  <div class="form-group">
+                    <label for="hscSchool">School / College Name <span class="required" aria-label="required">*</span></label>
+                    <input type="text" id="hscSchool" name="hsc_school" class="form-control" placeholder="School or college name" required aria-required="true">
+                    <span class="error-msg" id="err-hscSchool" role="alert">School/college name is required.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="hscYear">Year of Passing <span class="required" aria-label="required">*</span></label>
+                    <input type="number" id="hscYear" name="hsc_year" class="form-control" placeholder="e.g. 2024" min="2000" max="2030" required aria-required="true">
+                    <span class="error-msg" id="err-hscYear" role="alert">Enter a valid year (2000–2030).</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="hscPercent">Percentage <span class="required" aria-label="required">*</span></label>
+                    <input type="number" id="hscPercent" name="hsc_percentage" class="form-control" placeholder="e.g. 88.0" min="0" max="100" step="0.01" required aria-required="true">
+                    <span class="error-msg" id="err-hscPercent" role="alert">Enter a valid percentage (0–100).</span>
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label for="hscStream">Stream / Group <span class="required" aria-label="required">*</span></label>
+                    <select id="hscStream" name="hsc_stream" class="form-control" required aria-required="true">
+                      <option value="">Select stream</option>
+                      <option value="pcm">Physics, Chemistry, Mathematics</option>
+                      <option value="pcb">Physics, Chemistry, Biology</option>
+                      <option value="pcmb">Physics, Chemistry, Mathematics, Biology</option>
+                      <option value="commerce">Commerce</option>
+                      <option value="arts">Arts / Humanities</option>
+                    </select>
+                    <span class="error-msg" id="err-hscStream" role="alert">Please select your HSC stream.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="mathsPercent">Mathematics Score (%)</label>
+                    <input type="number" id="mathsPercent" name="maths_percentage" class="form-control" placeholder="Mathematics marks %" min="0" max="100" step="0.01">
+                  </div>
+                </div>
+              </fieldset>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline-primary" id="prevAcademic">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                  Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="nextAcademic">
+                  Next
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- SECTION 4: COURSE -->
+            <section class="form-section" id="section-course" aria-labelledby="heading-course">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-course">Course Preferences</h2>
+                  <p>Select your preferred programme of study. The course selection is an assignment-required field.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="course">Preferred Course <span class="required" aria-label="required">*</span></label>
+                <select id="course" name="course" class="form-control" required aria-required="true">
+                  <option value="">-- Select a Programme --</option>
+                  <optgroup label="B.E. Programmes">
+                    <option value="be-cse">B.E. Computer Science and Engineering</option>
+                    <option value="be-ece">B.E. Electronics and Communication Engineering</option>
+                    <option value="be-eee">B.E. Electrical and Electronics Engineering</option>
+                    <option value="be-mech">B.E. Mechanical Engineering</option>
+                    <option value="be-civil">B.E. Civil Engineering</option>
+                    <option value="be-aids">B.E. Artificial Intelligence and Data Science</option>
+                  </optgroup>
+                  <optgroup label="B.Tech Programmes">
+                    <option value="btech-it">B.Tech. Information Technology</option>
+                    <option value="btech-biotech">B.Tech. Biotechnology</option>
+                  </optgroup>
+                  <optgroup label="M.E. / M.Tech Programmes">
+                    <option value="me-cse">M.E. Computer Science and Engineering</option>
+                    <option value="me-vlsi">M.E. VLSI Design</option>
+                    <option value="me-cad">M.E. CAD / CAM</option>
+                  </optgroup>
+                  <optgroup label="MBA / MCA">
+                    <option value="mba">M.B.A.</option>
+                    <option value="mca">M.C.A.</option>
+                  </optgroup>
+                </select>
+                <span class="error-msg" id="err-course" role="alert">Please select a course of your preference.</span>
+              </div>
+              <div class="form-group">
+                <label for="alternativeCourse">Alternative Course Preference</label>
+                <select id="alternativeCourse" name="alternative_course" class="form-control">
+                  <option value="">-- Select an alternative (optional) --</option>
+                  <option value="be-cse">B.E. Computer Science and Engineering</option>
+                  <option value="be-ece">B.E. Electronics and Communication Engineering</option>
+                  <option value="be-eee">B.E. Electrical and Electronics Engineering</option>
+                  <option value="be-mech">B.E. Mechanical Engineering</option>
+                  <option value="be-civil">B.E. Civil Engineering</option>
+                  <option value="be-aids">B.E. Artificial Intelligence and Data Science</option>
+                  <option value="btech-it">B.Tech. Information Technology</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="admissionCategory">Admission Category <span class="required" aria-label="required">*</span></label>
+                <select id="admissionCategory" name="admission_category" class="form-control" required aria-required="true">
+                  <option value="">Select category</option>
+                  <option value="general">General / Open</option>
+                  <option value="obc">OBC</option>
+                  <option value="bc">BC</option>
+                  <option value="mbc">MBC / DNC</option>
+                  <option value="sc">SC / SCA</option>
+                  <option value="st">ST</option>
+                  <option value="management">Management Quota</option>
+                  <option value="nri">NRI</option>
+                </select>
+                <span class="error-msg" id="err-admissionCategory" role="alert">Please select your admission category.</span>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline-primary" id="prevCourse">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                  Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="nextCourse">
+                  Next
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- SECTION 5: ACCOUNT -->
+            <section class="form-section" id="section-account" aria-labelledby="heading-account">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-account">Account and Password</h2>
+                  <p>Create a secure password for your student portal account. You will use your email and this password to log in.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password <span class="required" aria-label="required">*</span></label>
+                <div class="input-with-toggle">
+                  <input type="password" id="password" name="password" class="form-control" placeholder="Create a strong password" required aria-required="true" aria-describedby="passwordStrength passwordHints">
+                  <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                    <svg class="icon-eye" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <svg class="icon-eye-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                  </button>
+                </div>
+                <!-- Password strength indicator -->
+                <div class="password-strength" id="passwordStrength" aria-live="polite">
+                  <div class="strength-bar">
+                    <div class="strength-fill" id="strengthFill"></div>
+                  </div>
+                  <span class="strength-label" id="strengthLabel">Enter a password</span>
+                </div>
+                <!-- Password hints -->
+                <ul class="password-hints" id="passwordHints" aria-label="Password requirements">
+                  <li id="hint-length">At least 8 characters</li>
+                  <li id="hint-upper">Contains an uppercase letter</li>
+                  <li id="hint-lower">Contains a lowercase letter</li>
+                  <li id="hint-number">Contains a number</li>
+                  <li id="hint-special">Contains a special character (!@#$%^&amp;*)</li>
+                </ul>
+                <span class="error-msg" id="err-password" role="alert">Password must be at least 8 characters and include uppercase, lowercase, a number, and a special character.</span>
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Confirm Password <span class="required" aria-label="required">*</span></label>
+                <div class="input-with-toggle">
+                  <input type="password" id="confirmPassword" name="confirm_password" class="form-control" placeholder="Re-enter your password" required aria-required="true">
+                  <button type="button" class="toggle-password" id="toggleConfirmPassword" aria-label="Show confirm password">
+                    <svg class="icon-eye" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <svg class="icon-eye-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+                  </button>
+                </div>
+                <span class="error-msg" id="err-confirmPassword" role="alert">Passwords do not match.</span>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline-primary" id="prevAccount">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                  Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="nextAccount">
+                  Next
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- SECTION 6: DOCUMENTS -->
+            <section class="form-section" id="section-documents" aria-labelledby="heading-documents">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-documents">Document Information</h2>
+                  <p>Upload your supporting documents. Accepted formats: PDF, JPG, JPEG, PNG. Maximum file size: 2 MB per file.</p>
+                </div>
+              </div>
+              <div class="upload-note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                <span>This is a front-end demonstration. Actual file storage requires the PHP/MySQL backend (Q2). File type and size are validated client-side.</span>
+              </div>
+
+              <!-- Profile Photo (assignment required: file upload) -->
+              <div class="form-group">
+                <label for="profilePhoto">Profile Photograph <span class="required" aria-label="required">*</span></label>
+                <div class="file-upload-area" id="dropzone-profile" tabindex="0" role="button" aria-describedby="profilePhotoHint">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <p>Drag and drop or <span class="upload-link">browse file</span></p>
+                  <p class="upload-hint" id="profilePhotoHint">JPG, JPEG or PNG only &#8212; max 2 MB</p>
+                  <input type="file" id="profilePhoto" name="profile_photo" class="file-input" accept=".jpg,.jpeg,.png" required aria-required="true">
+                </div>
+                <div class="file-preview" id="preview-profile" hidden></div>
+                <span class="error-msg" id="err-profilePhoto" role="alert">Please upload a valid profile photograph (JPG/PNG, max 2 MB).</span>
+              </div>
+
+              <!-- ID Proof -->
+              <div class="form-group">
+                <label for="idProof">Government ID Proof <span class="required" aria-label="required">*</span></label>
+                <div class="file-upload-area" id="dropzone-id" tabindex="0" role="button" aria-describedby="idProofHint">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <p>Drag and drop or <span class="upload-link">browse file</span></p>
+                  <p class="upload-hint" id="idProofHint">PDF, JPG, JPEG or PNG &#8212; max 2 MB</p>
+                  <input type="file" id="idProof" name="id_proof" class="file-input" accept=".pdf,.jpg,.jpeg,.png" required aria-required="true">
+                </div>
+                <div class="file-preview" id="preview-id" hidden></div>
+                <span class="error-msg" id="err-idProof" role="alert">Please upload a valid ID proof document (PDF/JPG/PNG, max 2 MB).</span>
+              </div>
+
+              <!-- 10th Certificate -->
+              <div class="form-group">
+                <label for="sslcCert">10th Standard Mark Sheet (SSLC)</label>
+                <div class="file-upload-area" id="dropzone-sslc" tabindex="0" role="button">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <p>Drag and drop or <span class="upload-link">browse file</span></p>
+                  <p class="upload-hint">PDF, JPG, JPEG or PNG &#8212; max 2 MB (optional)</p>
+                  <input type="file" id="sslcCert" name="sslc_certificate" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <div class="file-preview" id="preview-sslc" hidden></div>
+              </div>
+
+              <!-- 12th Certificate -->
+              <div class="form-group">
+                <label for="hscCert">12th Standard Mark Sheet (HSC)</label>
+                <div class="file-upload-area" id="dropzone-hsc" tabindex="0" role="button">
+                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                  <p>Drag and drop or <span class="upload-link">browse file</span></p>
+                  <p class="upload-hint">PDF, JPG, JPEG or PNG &#8212; max 2 MB (optional)</p>
+                  <input type="file" id="hscCert" name="hsc_certificate" class="file-input" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+                <div class="file-preview" id="preview-hsc" hidden></div>
+              </div>
+
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline-primary" id="prevDocuments">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                  Previous
+                </button>
+                <button type="button" class="btn btn-primary" id="nextDocuments">
+                  Next
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- SECTION 7: DECLARATION -->
+            <section class="form-section" id="section-declaration" aria-labelledby="heading-declaration">
+              <div class="section-heading">
+                <div class="section-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <div>
+                  <h2 id="heading-declaration">Declaration and Submission</h2>
+                  <p>Please read the declaration carefully and confirm before submitting your application.</p>
+                </div>
+              </div>
+              <div class="declaration-box">
+                <p>I hereby declare that all the information provided in this application form is true, correct, and complete to the best of my knowledge and belief. I understand that any misrepresentation or omission of facts may result in the cancellation of my admission. I agree to abide by the rules, regulations, and code of conduct of KPR Institute of Engineering and Technology.</p>
+              </div>
+              <div class="form-group" style="flex-direction: row; align-items: flex-start; gap: 12px; margin-top: 1.25rem;">
+                <input type="checkbox" id="declaration" name="declaration" style="width:18px;height:18px;margin-top:3px;accent-color:var(--color-primary);flex-shrink:0;" required aria-required="true">
+                <label for="declaration" style="font-size:0.875rem;cursor:pointer">I have read and accept the declaration above. I confirm that all information provided is accurate. <span class="required" aria-label="required">*</span></label>
+              </div>
+              <span class="error-msg" id="err-declaration" role="alert">You must accept the declaration to submit the application.</span>
+
+              <div class="form-nav form-nav--submit">
+                <button type="button" class="btn btn-outline-primary" id="prevDeclaration">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                  Previous
+                </button>
+                <div class="submit-actions">
+                  <button type="reset" class="btn btn-outline-primary" id="resetForm">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.63"/></svg>
+                    Reset Form
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+                    Submit Application
+                  </button>
+                </div>
+              </div>
+            </section>
+
+          </form>
+
+          <!-- SUCCESS STATE -->
+          <div class="success-state" id="successState" hidden role="status" aria-live="polite">
+            <div class="success-icon">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h2>Application Submitted Successfully!</h2>
+            <p style="font-size:1.05rem;margin-top:0.5rem">Thank you for applying to KPR Institute of Engineering and Technology.</p>
+            <div style="margin:1.25rem auto;background:#f0fdf4;padding:1rem 1.5rem;border-radius:var(--radius-md);border:1px solid #bbf7d0;max-width:440px;text-align:center;">
+              <span style="display:block;font-size:0.85rem;color:#166534">Your Application / Roll Number:</span>
+              <strong style="font-size:1.5rem;color:#15803d;letter-spacing:0.05em" id="successAppRef">21CS001</strong>
+            </div>
+            <p style="font-size:0.9rem;color:var(--color-text-secondary);max-width:520px;margin:0 auto">Your application record has been registered with status <strong>Pending Review</strong>. You can now log into the Student Portal to view your details and check admission status.</p>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:2rem">
+              <a href="../student_portal/login.php" class="btn btn-primary btn-lg">Go to Student Portal</a>
+              <a href="../index.html" class="btn btn-outline-primary">Return to Home</a>
+              <button type="button" class="btn btn-secondary" id="applyAgain" style="color:var(--color-text-primary);border-color:var(--color-border);">Submit Another Application</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <img src="../kprietLogo.png" alt="KPRIET Logo">
+        </div>
+        <p>An autonomous institution affiliated to Anna University, Chennai. Committed to quality technical education, research, and holistic student development.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Portals</h4>
+        <ul>
+          <li><a href="index.html">Admission Portal</a></li>
+          <li><a href="../Q2_College_Admin/auth/login.php">Admin Panel</a></li>
+          <li><a href="../student_portal/login.php">Student Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="../index.html#about">About KPRIET</a></li>
+          <li><a href="../index.html#services">Our Services</a></li>
+          <li><a href="../database/schema.sql">Database Schema</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Apply for Admission</a></li>
+          <li><a href="../Q2_College_Admin/auth/login.php">Administrator Login</a></li>
+          <li><a href="../student_portal/login.php">Student Profile Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 KPR Institute of Engineering and Technology, Coimbatore. All rights reserved.</span>
+      <span>Autonomous Institution &bull; Affiliated to Anna University</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

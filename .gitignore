@@ -1,0 +1,41 @@
+# ==============================================================================
+# Git Ignore - KPRIET Student Admission and Information Portal
+# ==============================================================================
+
+# Database & Environment Secrets
+*.local.php
+.env
+.env.*
+!.env.example
+
+# Uploaded Files (preserve directory with .gitkeep, ignore student uploads)
+Q2_College_Admin/uploads/*
+!Q2_College_Admin/uploads/.gitkeep
+
+# Java & Maven Build Outputs
+Q3_Student_Portal/target/
+*.class
+*.war
+*.jar
+
+# Temporary, Logs and Testing Files
+*.log
+cookie*.txt
+test_*.php
+scratch/
+.system_generated/
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# IDE and Editor Configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.user
+nbproject/
