@@ -26,8 +26,9 @@ if (!$file) {
     die('File not found or access denied.');
 }
 
+$baseReal = realpath(UPLOAD_BASE_DIR);
 $fullPath = realpath(UPLOAD_BASE_DIR . $file['relative_path']);
-if (!$fullPath || !str_starts_with($fullPath, realpath(UPLOAD_BASE_DIR)) || !is_file($fullPath)) {
+if (!$fullPath || !$baseReal || stripos($fullPath, $baseReal) !== 0 || !is_file($fullPath)) {
     http_response_code(404);
     die('File does not exist on disk.');
 }

@@ -52,8 +52,8 @@ try {
     $course            = trim($_POST['course'] ?? '');
     $alternativeCourse = trim($_POST['alternative_course'] ?? '');
     $category          = trim($_POST['admission_category'] ?? 'general');
-    $password          = $_POST['password'] ?? '';
-    $declaration       = isset($_POST['declaration']);
+    $password          = $_POST['password'] ?? ($_POST['portal_password'] ?? '');
+    $declaration       = !empty($_POST['declaration']) || !empty($_POST['declaration_accepted']);
 
     /* Validation */
     if ($fullName === '') {
@@ -120,44 +120,26 @@ try {
     $studentId = (int)$pdo->lastInsertId();
 
     /* Process document uploads if present */
-    $fileMap = [
-        'profilePhoto' => 'profile_photo',
-        'idProof'      => 'id_proof',
-        'sslcCert'     => 'sslc_certificate',
-        'hscCert'      => 'hsc_certificate',
+    $uploadMappings = [
+        'profile_photo'    => ['profile_photo', 'profilePhoto'],
+        'id_proof'         => ['id_proof', 'idProof'],
+        'sslc_certificate' => ['sslc_certificate', 'sslcCert'],
+        'hsc_certificate'  => ['hsc_certificate', 'hscCert'],
     ];
 
-    foreach ($fileMap as $inputKey => $category) {
-        if (!empty($_FILES[$inputKey]['name']) && $_FILES[$inputKey]['error'] === UPLOAD_ERR_OK) {
-            $f = $_FILES[$inputKey];
-            $ext = strtolower(pathinfo($f['name'], PATHINFO_EXTENSION));
-
-            if (!in_array($ext, UPLOAD_ALLOWED_EXTENSIONS, true)) continue;
-            if ($f['size'] > UPLOAD_MAX_BYTES) continue;
-
-            $subDir = 'student_' . $studentId . '/';
-            $targetDir = UPLOAD_BASE_DIR . $subDir;
-            if (!is_dir($targetDir)) {
-                mkdir($targetDir, 0755, true);
+    foreach ($uploadMappings as $category => $candidateKeys) {
+        $uploadedFile = null;
+        foreach ($candidateKeys as $key) {
+            if (!empty($_FILES[$key]['name']) && $_FILES[$key]['error'] === UPLOAD_ERR_OK) {
+                $uploadedFile = $_FILES[$key];
+                break;
             }
+        }
 
-            $storedName = sprintf('%08d_%s_%s.%s', $studentId, $category, bin2hex(random_bytes(6)), $ext);
-            $destination = $targetDir . $storedName;
-
-            if (move_uploaded_file($f['tmp_name'], $destination)) {
-                $fStmt = $pdo->prepare(
-                    'INSERT INTO student_files (student_id, original_filename, stored_filename, relative_path, mime_type, file_size, document_category)
-                     VALUES (?, ?, ?, ?, ?, ?, ?)'
-                );
-                $fStmt->execute([
-                    $studentId,
-                    basename($f['name']),
-                    $storedName,
-                    $subDir . $storedName,
-                    $f['type'] ?: 'application/octet-stream',
-                    $f['size'],
-                    $category
-                ]);
+        if ($uploadedFile) {
+            $uploadResult = handle_upload($uploadedFile, $category, "student_{$studentId}/");
+            if ($uploadResult['ok']) {
+                save_file_metadata($pdo, $studentId, $uploadResult);
             }
         }
     }

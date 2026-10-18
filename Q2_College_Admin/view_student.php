@@ -72,7 +72,7 @@ require __DIR__ . '/includes/header.php';
           $profilePhoto = $filesByCategory['profile_photo'][0] ?? null;
           ?>
           <?php if ($profilePhoto): ?>
-            <img src="download.php?path=<?= urlencode($profilePhoto['relative_path']) ?>&type=image"
+            <img src="download.php?id=<?= (int)$profilePhoto['id'] ?>&type=image"
                  alt="<?= h($student['full_name']) ?> profile photo"
                  class="profile-photo" id="profilePhoto">
           <?php else: ?>
@@ -156,7 +156,7 @@ require __DIR__ . '/includes/header.php';
                 <div class="file-item" id="file-<?= (int)$f['id'] ?>">
                   <div class="file-item__icon">
                     <?php if (str_starts_with($f['mime_type'], 'image/')): ?>
-                      <img src="download.php?path=<?= urlencode($f['relative_path']) ?>&type=image"
+                      <img src="download.php?id=<?= (int)$f['id'] ?>&type=image"
                            alt="<?= h($f['original_filename']) ?>" class="file-thumb">
                     <?php else: ?>
                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>

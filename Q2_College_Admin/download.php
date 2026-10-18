@@ -33,7 +33,9 @@ if (isset($_GET['id'])) {
 $baseReal = realpath(UPLOAD_BASE_DIR);
 $fileReal = $filePath ? realpath($filePath) : false;
 
-if (!$fileReal || !$baseReal || strpos($fileReal, $baseReal) !== 0 || !is_file($fileReal)) {
+$isAllowed = $fileReal && $baseReal && (stripos($fileReal, $baseReal) === 0) && is_file($fileReal);
+
+if (!$isAllowed) {
     // If it was an image request, return transparent 1x1 or 404
     if (isset($_GET['type']) && $_GET['type'] === 'image') {
         http_response_code(404);

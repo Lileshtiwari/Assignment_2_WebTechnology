@@ -20,8 +20,16 @@ if (!defined('UPLOAD_MAX_BYTES')) define('UPLOAD_MAX_BYTES', UPLOAD_MAX_MB * 102
 if (!defined('UPLOAD_ALLOWED_EXTENSIONS')) define('UPLOAD_ALLOWED_EXTENSIONS', ['jpg','jpeg','png','pdf']);
 if (!defined('UPLOAD_ALLOWED_MIMES')) define('UPLOAD_ALLOWED_MIMES', [
     'image/jpeg',
+    'image/pjpeg',
     'image/png',
+    'image/x-png',
+    'image/webp',
     'application/pdf',
+    'application/x-pdf',
+    'application/acrobat',
+    'applications/vnd.pdf',
+    'text/pdf',
+    'application/octet-stream',
 ]);
 
 /* Create upload directory if it doesn't exist */
